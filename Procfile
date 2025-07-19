@@ -1,1 +1,1 @@
-web: gunicorn justinhasda.wsgi
+web: gunicorn justinhasda.wsgi:application
