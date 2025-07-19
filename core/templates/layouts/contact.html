@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block content %}
+<div class="contact-Section">
+    <div class="container">
+        <h2 class="text-center mb-4">Say Hello!</h2>
+
+        {% if messages %}
+        <div class="success-message mb-3">
+            {% for message in messages %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <form method="post" class="mx-auto" style="max-width: 700px;">
+            {% csrf_token %}
+
+            <div class="mb-3">
+                {{ form.name.label_tag }}
+                {{ form.name }}
+            </div>
+
+            <div class="mb-3">
+                {{ form.email.label_tag }}
+                {{ form.email }}
+            </div>
+
+            <div class="mb-3">
+                {{ form.subject.label_tag }}
+                {{ form.subject }}
+            </div>
+
+            <div class="mb-3">
+                {{ form.message.label_tag }}
+                {{ form.message }}
+            </div>
+
+            <button type="submit" class="btn btn-dark">Send Message</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}

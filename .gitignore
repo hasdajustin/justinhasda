@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+env/
+venv/
+ENV/
+.venv/
+*.env
+
+# Django stuff
+*.log
+db.sqlite3
+media/
+staticfiles/
+
+# dotenv
+.env
+.env.*
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Migrations (optional – keep if you don’t want to track migrations initially)
+*/migrations/__pycache__/
+*/migrations/*.pyc
+# Uncomment next line if you want to ignore migrations (not recommended in production)
+# */migrations/*.py

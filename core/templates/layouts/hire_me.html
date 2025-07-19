@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Hire Me{% endblock title %}
+
+{% block content %}
+<div class="hireMe-Section">
+    <div class="container">
+        <h2 class="mb-4 text-center">Hire Request</h2>
+
+        {% if messages %}
+        <div class="success-message mb-4">
+            {% for message in messages %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <form method="post" class="mx-auto" style="max-width: 700px;">
+            {% csrf_token %}
+
+            <div class="mb-3">
+                {{ form.name.label_tag }}
+                {{ form.name }}
+            </div>
+
+            <div class="mb-3">
+                {{ form.email.label_tag }}
+                {{ form.email }}
+            </div>
+
+            <div class="mb-3">
+                {{ form.project_type.label_tag }}
+                {{ form.project_type }}
+            </div>
+
+            <div class="mb-3">
+                {{ form.budget.label_tag }}
+                {{ form.budget }}
+            </div>
+
+            <div class="mb-3">
+                {{ form.message.label_tag }}
+                {{ form.message }}
+            </div>
+
+            <button type="submit" class="btn btn-dark">Send Hire Request</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}

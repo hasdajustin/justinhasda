@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+<header>
+    <div class="container">
+        <div class="row d-flex align-items-center">
+
+            <div class="col-lg-3 col-md-6 col-sm-12 order-1 order-lg-2 mb-4 mb-lg-0 text-center">
+                <img src="{% static 'images/justinhasda.jpg' %}" class="img-fluid rounded" alt="justinhasda">
+            </div>
+
+            <div class="col-lg-9 col-md-6 col-sm-12 order-2 order-lg-1">
+                <h3>Hello There!</h3>
+                <h1>I'm Matheus Justin Hasda</h1>
+                <h3><span id="typed"></span></h3>
+                <p>
+                    A passionate web developer focused on building clean, responsive, and user-friendly websites. I work
+                    mostly with Django, Bootstrap, and JavaScript to bring ideas to life. I love learning new
+                    technologies and turning challenges into creative solutions.
+                </p>
+                <a href="{% static 'doc/Resume_Of_Matheus_Justin_Hasda.pdf' %}" class="hire-me btn btn-outline-dark"
+                    download>Download Resume</a>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<div class="skill-Section">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                <h5><i class="fa-solid fa-terminal me-2"></i>Full-Stack Development</h5>
+                <p>Designing and building fully functional web applications with seamless frontend-backend
+                    communication, user authentication, and responsive UI.</p>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                <h5><i class="fa-solid fa-layer-group me-2"></i>Backend with Django</h5>
+                <p>Developing secure, RESTful APIs and managing databases efficiently with Django ORM for scalable web
+                    solutions.</p>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                <h5><i class="fa-solid fa-database me-2"></i>Database & <i class="fas fa-tools me-2"></i>Tools</h5>
+                <p>Working with PostgreSQL and SQLite databases to build reliable applications. Using Git, GitHub, and
+                    VS Code for version control and efficient development workflow.</p>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    new Typed("#typed", {
+      strings: ["Web Designer", "Web Developer", "Full-Stack Developer"],
+      typeSpeed: 60,
+      backSpeed: 40,
+      loop: true
+    });
+  });
+</script>
+
+
+
+
+{% endblock content %}

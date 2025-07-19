@@ -1,0 +1,139 @@
+:root {
+    --primary-bg: #000000ef;
+    --primary-text: #ffffff;
+    --secondary-text: #000000;
+    --primary-shadow: 0px 15px 30px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    background-color: var(--primary-bg) !important;
+}
+
+nav a {
+    color: var(--primary-text) !important;
+}
+
+nav .hire-me {
+    border: 1px solid var(--primary-text) !important;
+}
+
+nav .hire-me:hover {
+    color: var(--secondary-text) !important;
+    background-color: var(--primary-text) !important;
+}
+
+
+
+
+header {
+    margin: 50px 0px !important;
+}
+
+header .container {
+    padding: 40px !important;
+    box-shadow: var(--primary-shadow) !important;
+    border-radius: 10px !important;
+}
+
+.skill-Section {
+    margin: 50px 0px !important;
+}
+
+.skill-Section .container {
+    padding: 40px !important;
+    box-shadow: var(--primary-shadow) !important;
+    border-radius: 10px !important;
+}
+
+
+.project-Section {
+    margin: 50px 0px !important;
+}
+
+.project-Section .container {
+    padding: 40px !important;
+    box-shadow: var(--primary-shadow) !important;
+    border-radius: 10px !important;
+}
+
+
+.contact-Section {
+    margin: 50px 0px !important;
+}
+
+.contact-Section .container {
+    padding: 40px !important;
+    box-shadow: var(--primary-shadow) !important;
+    border-radius: 10px !important
+}
+
+
+.hireMe-Section {
+    margin: 50px 0px !important;
+}
+
+.hireMe-Section .container {
+    padding: 40px !important;
+    box-shadow: var(--primary-shadow) !important;
+    border-radius: 10px !important;
+}
+
+
+footer {
+    background-color: var(--primary-bg) !important;
+    color: var(--primary-text) !important;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1) brightness(2);
+}
+
+
+
+@media (max-width: 575.98px) {
+    img.img-fluid.rounded {
+        width: 200px !important;
+    }
+
+    header,
+    .skill-Section,
+    .project-Section,
+    .contact-Section,
+    .hireMe-Section {
+        margin: 0px !important;
+    }
+
+    header h3,
+    h1 {
+        text-align: center;
+    }
+
+    header .container,
+    .skill-Section .container {
+        padding: 20px !important;
+        box-shadow: none !important;
+        border-radius: none !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    img.img-fluid.rounded {
+        width: 250px !important;
+    }
+
+    header,
+    .skill-Section,
+    .project-Section,
+    .contact-Section,
+    .hireMe-Section {
+        margin: 25px !important;
+    }
+
+
+    header .container,
+    .skill-Section .container {
+        padding: 20px !important;
+        box-shadow: none !important;
+        border-radius: none !important;
+    }
+}
